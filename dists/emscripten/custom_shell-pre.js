@@ -9,17 +9,6 @@ if (window.location.hash.length > 0) {
     })
 }
 
-// MIDI support
+// MIDI support: not requested. The Web MIDI permission prompt (hardware sysex access) is not wanted on a hosted
+// instance; midiOutputMap stays undefined and the webmidi backend lists no devices (see backends/midi/webmidi.cpp).
 var midiOutputMap;
-if (!("requestMIDIAccess" in navigator)) {
-	console.error("No MIDI support in your browser.");
-} else {
-	navigator
-		.requestMIDIAccess({ sysex: true, software: true })
-		.then((midiAccess) => {
-			midiOutputMap = midiAccess.outputs;
-			midiAccess.onstatechange = (e) => {
-				midiOutputMap = e.target.outputs;
-			};
-		});
-}
