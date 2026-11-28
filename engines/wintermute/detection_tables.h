@@ -2917,6 +2917,11 @@ static const WMEGameDescription gameDescriptions[] = {
 					"xlanguage_ru.dcp", "4e01e8d4759fddbcb6eb07d19c0c3335", 10866770,
 					"Mac.dcp", "50911598561dc0ac7d050aeadbb58815", 4866263), Common::RU_RUS, Common::kPlatformMacintosh, ADGF_NO_FLAGS, WME_LITE),
 
+	// Reversion: The Escape (Steam) (Spanish) trac #17404
+	WME_WINENTRY("reversion1", "Steam",
+		WME_ENTRY2s("data.dcp", "6a000b6f45349345fd16e6d5a7db1307", 254185787,
+					"data.dcp", "6a000b6f45349345fd16e6d5a7db1307", 254185787), Common::ES_ESP, ADGF_NO_FLAGS, WME_1_9_3),
+
 	// Reversion: The Escape (Steam, July 2019) (Spanish)
 	WME_WINENTRY("reversion1", "Steam",
 		WME_ENTRY2s("data.dcp", "371f8cde148050eda33e60cf059bf894", 283546874,
